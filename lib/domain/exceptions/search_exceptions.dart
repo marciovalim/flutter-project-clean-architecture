@@ -1,9 +1,13 @@
-abstract class SearchException implements Exception {}
-
-class SearchInvalidTextException extends SearchException {}
-
-class SearchDatasourceException extends SearchException {
+abstract class SearchException implements Exception {
   final String message;
 
-  SearchDatasourceException(this.message);
+  SearchException(this.message);
+}
+
+class SearchInvalidTextException extends SearchException {
+  SearchInvalidTextException(String message) : super(message);
+}
+
+class SearchDatasourceException extends SearchException {
+  SearchDatasourceException(String message) : super(message);
 }

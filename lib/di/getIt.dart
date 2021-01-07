@@ -4,6 +4,7 @@ import 'package:flutter_ca_external_search/data/local/repositories/search_reposi
 import 'package:flutter_ca_external_search/data/remote/datasources/github_datasource.dart';
 import 'package:flutter_ca_external_search/domain/repositories/search_repository.dart';
 import 'package:flutter_ca_external_search/domain/usecases/search_by_text.dart';
+import 'package:flutter_ca_external_search/presentation/viewmodels/search_viewmodel.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -23,6 +24,9 @@ class GetItUtils {
     );
     getIt.registerLazySingleton<SearchByText>(
       () => SearchByTextImpl(getIt<SearchRepository>()),
+    );
+    getIt.registerLazySingleton<SearchViewmodel>(
+      () => SearchViewmodel(getIt<SearchByText>()),
     );
   }
 }

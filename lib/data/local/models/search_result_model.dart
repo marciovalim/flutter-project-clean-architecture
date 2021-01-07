@@ -5,18 +5,18 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_ca_external_search/domain/entities/search_result.dart';
 
 class SearchResultModel extends SearchResult {
-  final String title;
-  final String imageUrl;
+  final String login;
+  final String avatarUrl;
 
   const SearchResultModel({
-    @required this.title,
-    @required this.imageUrl,
+    @required this.login,
+    @required this.avatarUrl,
   });
 
   Map<String, dynamic> toMap() {
     return {
-      'title': title,
-      'imageUrl': imageUrl,
+      'login': login,
+      'avatar_url': avatarUrl,
     };
   }
 
@@ -24,8 +24,8 @@ class SearchResultModel extends SearchResult {
     if (map == null) return null;
 
     return SearchResultModel(
-      title: map['title'],
-      imageUrl: map['imageUrl'],
+      login: map['login'],
+      avatarUrl: map['avatar_url'],
     );
   }
 

@@ -1,11 +1,16 @@
 import 'package:flutter/foundation.dart';
 
 class SearchResult {
-  final String title;
-  final String imageUrl;
+  final String login;
+  final String avatarUrl;
 
   const SearchResult({
-    @required this.title,
-    @required this.imageUrl,
+    @required this.login,
+    @required this.avatarUrl,
   });
+
+  @override
+  String toString() {
+    return '$login';
+  }
 }

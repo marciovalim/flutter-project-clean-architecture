@@ -27,6 +27,6 @@ class GithubDataSource implements SearchDataSource {
   }
 
   String _treatText(String searchText) {
-    return searchText.replaceAll(' ', '%20');
+    return searchText.replaceAll(' ', '+');
   }
 }

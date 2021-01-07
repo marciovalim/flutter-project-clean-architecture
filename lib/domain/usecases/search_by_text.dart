@@ -16,7 +16,7 @@ class SearchByTextImpl implements SearchByText {
   @override
   Future<Either<SearchException, List<SearchResult>>> call(String text) async {
     if (text == null || text.isEmpty) {
-      return Left(SearchInvalidTextException());
+      return Left(SearchInvalidTextException(''));
     }
     return searchRepository.searchByText(text);
   }
