@@ -1,4 +1,4 @@
-import 'package:flutter_ca_external_search/data/datasources/search_datasource.dart';
+import 'package:flutter_ca_external_search/data/local/datasources/search_datasource.dart';
 import 'package:flutter_ca_external_search/domain/exceptions/search_exceptions.dart';
 import 'package:flutter_ca_external_search/domain/entities/search_result.dart';
 import 'package:dartz/dartz.dart';

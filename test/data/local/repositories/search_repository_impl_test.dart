@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ca_external_search/data/datasources/search_datasource.dart';
-import 'package:flutter_ca_external_search/data/models/search_result_model.dart';
-import 'package:flutter_ca_external_search/data/repositories/search_repository_impl.dart';
+import 'package:flutter_ca_external_search/data/local/datasources/search_datasource.dart';
+import 'package:flutter_ca_external_search/data/local/models/search_result_model.dart';
+import 'package:flutter_ca_external_search/data/local/repositories/search_repository_impl.dart';
 import 'package:flutter_ca_external_search/domain/exceptions/search_exceptions.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
